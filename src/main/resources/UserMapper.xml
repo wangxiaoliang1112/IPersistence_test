@@ -1,0 +1,29 @@
+<mapper namespace = "com.lagou.dao.IUserDao">
+
+
+    <!-- statementid user+selectList -->
+    <select id="findAll" resultType="com.lagou.pojo.User">
+        select * From user
+    </select>
+
+
+    <select id="findAllCondition" parameterType="com.lagou.pojo.User" resultType="com.lagou.pojo.User">
+        select * From user where id = #{id} and name = #{name}
+    </select>
+
+
+    <insert id="insertUser" parameterType="com.lagou.pojo.User" resultType="com.lagou.pojo.User">
+        insert into user(id,username)
+        values(#{id},#{username})
+    </insert>
+
+    <update id="updateUser" parameterType="com.lagou.pojo.User" resultType="int">
+        update user set username = #{username} where id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="com.lagou.pojo.User" resultType="int" >
+        delete from user where id = #{id}
+    </delete>
+
+
+</mapper>

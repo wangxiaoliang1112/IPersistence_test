@@ -1,0 +1,14 @@
+<configuration>
+
+    <properties>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcurl" value="jdbc:mysql://localhost:3306/ipersistence"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="123456"></property>
+    </properties>
+
+
+    <mappers>
+        <mapper resource="UserMapper.xml"></mapper>
+    </mappers>
+</configuration>
